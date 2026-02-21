@@ -1,0 +1,1 @@
+# mindshop-mvp
