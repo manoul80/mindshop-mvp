@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8"
+ <title>마음상점에 오신것을 환영합니다</title>
+</head>
+<body>
+
+<h2>마음상점 체험하기</h2>
+<p>지금 가장 가까운 감정을 선택해주세요.</p>
+
+<button onclick="comfort('tired')">😔 지침</button>
+<button onclick="comfort('anxious')">😰 불안</button>
+<button onclick="comfort('sad')">😢 슬픔</button>
+
+<br><br>
+
+<button onclick="summarize()">요약하기</button>
+
+
+<div id="result" style="border:1px solid black; padding:10px; width:300px;">
+여기에 요약이 표시됩니다.
+</div>
+<script>
+  function comfort(emotion) {
+  
+    let message = "";
+  
+    if(emotion === "tired") {
+      message = "오늘의 마음은 버티고 있는 중일지도 몰라요.\n\n지금은 쉬어도 괜찮다는 신호일 수 있어요.\n5분간 눈을 감고 숨을 느껴보세요.\n\n지금 가장 부담되는 일은 무엇인가요?";
+    }
+  
+    else if(emotion === "anxious") {
+      message = "오늘의 마음은 미래를 너무 앞서 걱정하고 있는지도 몰라요.\n\n지금 당장 해결할 수 없는 문제는 내려놔도 괜찮아요.\n3분만 숨을 천천히 세어보세요.\n\n지금 가장 불확실하게 느껴지는 건 무엇인가요?";
+    }
+  
+    else if(emotion === "sad") {
+      message = "오늘의 마음은 조용히 위로가 필요한 상태일지도 몰라요.\n\n감정은 억누르기보다 흘려보내야 합니다.\n따뜻한 물 한 잔을 마셔보세요.\n\n지금 나에게 가장 필요한 말은 무엇인가요?";
+    }
+  
+    document.getElementById("result").innerText = message;
+  }
+  </script>
+</body>
+</html>
